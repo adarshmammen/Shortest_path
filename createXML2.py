@@ -7,25 +7,20 @@ with open('cal_cnode.txt') as f_nodes_to_latlong:
 f = open('nodes_for_xml.txt', 'r')
 
 line1 = f.readline()
-mylist1 = line1.split(",")
-
+line2 = f.readline()
+mylist2 = line2.split(",")
 
 root = ET.Element("root")
-#1st shortest path
+#2nd shortest path
 
-for nodes in mylist1[:-1]:
+
+for nodes2 in mylist2[:-1]:
 	doc = ET.SubElement(root, "row")
-	latlong = content[int(nodes)].split(' ')
+	latlong = content[int(nodes2)].split(' ')
 	ET.SubElement(doc, "lat").text = latlong[2]
 	ET.SubElement(doc, "long").text = latlong[1] # may have to switch
 
 tree = ET.ElementTree(root)
-tree.write("latlong.xml")
-
-#print(mylist1[:-1])
-#print('\n')
-#print(mylist2[:-1])
-#print('\n')
-#print(mylist3[:-1])
+tree.write("latlong2.xml")
 
 f.close()
