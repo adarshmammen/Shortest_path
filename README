@@ -24,3 +24,9 @@ sh daemon.sh
 keep terminal open
 
 open OPEN_THIS on chrome
+
+
+*******
+You need to install apache for this to work
+daemon is functional on chrome only if you set a direct download to this folder
+
