@@ -1,12 +1,10 @@
 ///Author Adarsh Verghese
 ///Keep comments for debugging
-
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
 using namespace std;
-
 // this is to calculate the geodesic distance later
 #include <math.h>
 #include <stdio.h>
@@ -34,13 +32,11 @@ double distance1(double lat1, double lon1, double lat2, double lon2, char unit) 
   return (dist);
 }
 
-
 /* This function converts decimal degrees to radians*/
 
 double deg2rad(double deg) {
   return (deg * pi / 180);
 }
-
 
 /*  This function converts radians to decimal degrees */
 
